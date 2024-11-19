@@ -7,6 +7,12 @@ for (let i = 1; i < 11; i++) {
 }
 //2.--------------------------------------------------------------------------------------
 // Print the numbers 1-10 using a "while loop"
+number = 1;
+
+while (number <= 10) {
+  console.log(number);
+  number++;
+}
 
 //3.--------------------------------------------------------------------------------------
 // Print each item in myArray using a "for loop".
