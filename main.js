@@ -57,17 +57,28 @@ console.log(myString);
 //8--------------------------------------------------------------------------------------
 //Create a function that takes a number as an argument and returns that number squared.
 // call your function by using a valid argument
-function numberSquared(number) {}
+function numberSquared(number) {
+  return 5 * 5;
+}
 
-numberSquared();
+const result = numberSquared(5);
+console.log(result);
 
 //9.--------------------------------------------------------------------------------------
 //Using the "%" (modulo) operator complete the function,
 // it should take "number" as an argument and return "even" if its even and "odd" if its odd.
-function oddOrEven(number) {}
+function oddOrEven(number) {
+  if (number % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
+}
 //call your function by using one of the options below.
-// oddOrEven(prompt());
-// oddOrEven()
+// oddOrEven(prompt(4));
+// oddOrEven(5);
+
+// console.log(oddOrEven(prompt(4)));
 
 //10.--------------------------------------------------------------------------------------
 //write a function that prints the fibbonacci sequence for the number passed into it
@@ -75,15 +86,38 @@ function oddOrEven(number) {}
 //  c = a + b;
 //  a = b;
 //  b = c;
-function Fibbonacci(number) {}
-Fibbonacci();
+// function Fibbonacci(number) {
+//   let a = 0,
+//     b = 1;
+//   for (let i = 0; i < number; i++) {
+//     console.log(a);
+//     let c = a + b;
+//     a = b;
+//     b = c;
+//   }
+// }
+// Fibbonacci(5);
 
 //11.--------------------------------------------------------------------------------------
 //BONUS!Implement fizzbuzz, if a number is divisible by 3: Fizz, if a number is divisible by 5: Buzz, if the number is divisible by both 3 and 5, FizzBuzz
 // https://www.geeksforgeeks.org/fizz-buzz-implementation/
-function fizzbuzz(number) {}
+function fizzbuzz(number) {
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      return "FizzBuzz";
+    } else if (i % 3 === 0) {
+      return "Fizz";
+    } else if (i % 5 === 0) {
+      return "Buzz";
+    } else {
+      return i;
+    }
+  }
+}
 
-fizzbuzz();
+// fizzbuzz(7);
+
+console.log(fizzbuzz(20));
 
 //12.--------------------------------------------------------------------------------------
 //SUPERBONUS - we have not talked about recursion yet, but here is a fun one to try.
@@ -92,6 +126,8 @@ fizzbuzz();
 //example: factorial(5) = 5 * 4 * 3 * 2 * 1 = 120
 function factorial(n) {
   if (n === 0) return 1;
-  return; /// din kode her
+  {
+    return n * factorial(n - 1);
+  }
 }
 console.log(factorial(5));
