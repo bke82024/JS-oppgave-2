@@ -16,23 +16,43 @@ while (number <= 10) {
 
 //3.--------------------------------------------------------------------------------------
 // Print each item in myArray using a "for loop".
-
+for (let i = 0; i < myArray.length; i++) {
+  console.log(myArray[i]);
+}
 //4.--------------------------------------------------------------------------------------
 // Using the myArray.push() method, add "mango" to the end of myArray.
 //print myArray using a for... of loop.
+// myArray.push("mango");
+for (let i = 0; i < myArray.length; i++) {
+  console.log(myArray[i]);
+}
 
 //5.--------------------------------------------------------------------------------------
 //Using the myArray.splice() method, remove "cherry" from myArray
 // print the result using myArray.foreach()
+const index = myArray.indexOf("cherry");
+if (index !== -1) {
+  myArray.splice(index, 1);
+}
+
+myArray.forEach((item) => console.log(item));
 
 //6.--------------------------------------------------------------------------------------
 // Using the .shift() and .pop() method, remove the first and last item from myArray.
 //print the result
 
+myArray.shift();
+
+myArray.pop();
+
+console.log(myArray);
+
 // 7.--------------------------------------------------------------------------------------
 // create a variable and assign it the content of myArray as a string using .join().
 // print your variable.
 //BONUS - See if you can make the items be seperated by a space
+const myString = myArray.join(" ");
+console.log(myString);
 
 //8--------------------------------------------------------------------------------------
 //Create a function that takes a number as an argument and returns that number squared.
